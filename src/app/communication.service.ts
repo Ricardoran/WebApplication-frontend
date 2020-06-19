@@ -7,6 +7,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 })
 export class CommunicationService {
   backend_url = 'https://hw8-backend-v2.wl.r.appspot.com';
+  // backend_url = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {
   }

@@ -104,7 +104,7 @@ export class SearchTableComponent implements OnInit {
       data => {
         _this.itemData = data;
         console.log(this.itemData);
-        if (_this.itemData['count'] == 0) {
+        if (_this.itemData['itemCount'] == 0) {
           _this.hasResult = false;
           _this.originalPic= true;
           console.log(_this.hasResult);
