@@ -1,0 +1,75 @@
+/*.mat-tab-group {*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*p{*/
+/*  font-weight: bold;*/
+/*}*/
+/*table{*/
+/*  border-collapse: separate;*/
+/*  border-spacing: 10px 10px;*/
+/*}*/
+/*.done{*/
+/*  color: green;*/
+/*}*/
+/*.clear{*/
+/*  color:red;*/
+/*}*/
+/*.mat-tab:visited{*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*responsive design for small screen*/
+@media screen and (max-width: 570px) {
+  .mat-tab-group {
+    margin-bottom: 10px;
+  }
+  p{
+    font-weight: bold;
+  }
+  table{
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+    font-size: 10px;
+  }
+  td{
+    padding: 5px;
+    height: 38px;
+  }
+  .done{
+    color: green;
+  }
+  .clear{
+    color:red;
+  }
+  .mat-tab:visited{
+    font-weight: bold;
+  }
+
+}
+
+/*responsive design for large screen*/
+@media screen and (min-width: 570px) {
+  .mat-tab-group {
+    margin-bottom: 10px;
+  }
+  p{
+    font-weight: bold;
+  }
+  table{
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+  }
+  td{
+    padding: 10px;
+  }
+  .done{
+    color: green;
+  }
+  .clear{
+    color:red;
+  }
+  .mat-tab:visited{
+    font-weight: bold;
+  }
+
+}

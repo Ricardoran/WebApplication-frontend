@@ -1,0 +1,82 @@
+<mat-tab-group mat-align-tabs="start" animationDuration="500ms">
+
+  <mat-tab  label="Basic Info">
+    <table>
+      <tr>
+        <td><b>Category Name</b></td>
+        <td>{{data.category}}</td>
+      </tr>
+      <tr>
+        <td><b>Condition</b></td>
+        <td>{{data.condition}}</td>
+      </tr>
+    </table>
+
+  </mat-tab>
+
+  <mat-tab  label="Shipping Info">
+    <table>
+      <tr>
+        <td><b>ShippingType</b></td>
+        <td>{{data.shippingType}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Shipping cost</b></td>
+        <td>{{data.shippingCost}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Shippingtolocations</b></td>
+        <td> {{data.shippingTo}}</td>
+      </tr>
+
+      <tr>
+        <td ><b>ExpeditedShipping</b></td>
+        <td *ngIf="data.expeditedShipping == 'true'"><span class="material-icons done">done</span></td>
+        <td *ngIf="data.expeditedShipping == 'false'"><span class="material-icons clear">clear</span></td>
+      </tr>
+
+      <tr>
+        <td ><b>OneDayShippingAvailable</b></td>
+        <td *ngIf="data.oneDayShippingAvailable == 'true'"><span class="material-icons done">done</span></td>
+        <td *ngIf="data.oneDayShippingAvailable == 'false'"><span class="material-icons clear">clear</span></td>
+      </tr>
+
+    </table>
+  </mat-tab>
+
+  <mat-tab  label="Listing info">
+    <table>
+      <tr>
+        <td><b>BestOfferEnabled</b></td>
+        <td *ngIf="data.bestOfferEnabled == 'true'"><span class="material-icons done">done</span></td>
+        <td *ngIf="data.bestOfferEnabled == 'false'"><span class="material-icons clear">clear</span></td>
+      </tr>
+
+      <tr>
+        <td><b>BuyItNowAvailable</b></td>
+        <td *ngIf="data.buyItNowAvailable == 'true'"><span class="material-icons done">done</span></td>
+        <td *ngIf="data.buyItNowAvailable == 'false'"><span class="material-icons clear">clear</span></td>
+      </tr>
+
+      <tr>
+        <td><b>ListingType</b></td>
+        <td> {{data.listingType}}</td>
+      </tr>
+
+      <tr>
+        <td><b>Gift</b></td>
+        <td *ngIf = "data.gift == 'true'"><span class="material-icons done">done</span></td>
+        <td *ngIf = "data.gift == 'false'"><span class="material-icons clear">clear</span></td>
+      </tr>
+
+      <tr>
+        <td><b>WatchCount</b></td>
+        <td>{{data.watchCount}}</td>
+      </tr>
+
+    </table>
+  </mat-tab>
+
+</mat-tab-group>

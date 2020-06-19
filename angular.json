@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HW8FrontEndV2"
+    }
+  },
+  "defaultProject": "HW8FrontEndV2",
+  "cli": {
+    "analytics": "549e27ee-15ce-4d7e-8f6d-a1a303f404b2"
+  }
 }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
+// as a decorator in ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-root',  // component name
+  templateUrl: './app.component.html',  // component content
+  styleUrls: ['./app.component.css']    // component layout
 })
 export class AppComponent {
-  title = 'HW8FrontEndV2';
+  // title = 'HW8FrontEndV2';
 }

@@ -1,0 +1,133 @@
+/*responsive design for small screen*/
+@media screen and (max-width: 570px) {
+  .responsive-small{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .responsive-large{
+    display: none;
+  }
+
+  .display_table {
+    width: 100%;
+  }
+
+  .display-result{
+    font-family: 'Roboto', sans-serif;
+    font-size:25px;
+    float: left;
+    margin-left: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table{
+  }
+  pagination-controls{
+    margin: 0 auto;
+    position: relative;
+    right: 20px;
+    font-size: 12px;
+  }
+
+  .page /deep/ .ngx-pagination{
+    margin-bottom: 0;
+  }
+  .page /deep/ a {
+    padding: 3px;
+  }
+
+}
+
+/*tablet screen*/
+@media screen and (min-width: 570px) and (max-width: 800px){
+
+  .responsive-small{
+    display: none;
+  }
+
+  .responsive-large{
+    display: block;
+  }
+
+  .display_table{
+    width: 100%;
+    margin:0 auto ;
+  }
+
+  .display-result{
+    font-family: 'Roboto', sans-serif;
+    font-size:25px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: 5%;
+
+
+  }
+  pagination-controls{
+    float: right ;
+    position: relative;
+    top: 5px;
+    right: 5%;
+    font-size: 12px;
+  }
+  .page /deep/ .ngx-pagination{
+    margin-bottom: 0;
+  }
+  .page /deep/ a{
+    padding: 3px;
+  }
+}
+
+
+
+
+
+/*large screen*/
+@media screen and (min-width: 800px) {
+
+  .responsive-small{
+    display: none;
+  }
+
+  .responsive-large{
+    display: block;
+  }
+
+  .display_table{
+    width: 80%;
+    margin:0 auto ;
+  }
+
+  .display-result{
+    font-family: 'Roboto', sans-serif;
+    font-size:25px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: 5%;
+    margin-bottom: 10px;
+
+  }
+  pagination-controls{
+    float: right ;
+    position: relative;
+    top: 5px;
+    right: 5%;
+    font-size: 12px;
+  }
+  .page /deep/ .ngx-pagination{
+    margin-bottom: 0;
+  }
+  .page /deep/ a{
+    padding: 3px;
+  }
+  .page /deep/ .ngx-pagination.current{
+    padding: 3px;
+  }
+}
+
+

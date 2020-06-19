@@ -1,0 +1,30 @@
+<table class="display_table">
+  <div class="display-result"><b>Results for {{keyword}}</b></div>
+
+  <div class="responsive-small justify-content-center">
+    <pagination-controls
+      (pageChange)="p = $event"
+      maxSize="5"
+      directionLinks="true"
+      class="page">
+    </pagination-controls>
+  </div>
+
+  <div class="responsive-large">
+    <pagination-controls
+      (pageChange)="p = $event"
+      maxSize="10"
+      directionLinks="true"
+      class="page">
+      >
+    </pagination-controls>
+  </div>
+
+  <tr *ngFor="let item of itemData |paginate: {
+                    itemsPerPage: 5,
+                    currentPage: p}">
+    <app-display-card [item]="item"></app-display-card>
+  </tr>
+
+
+</table>

@@ -1,0 +1,109 @@
+<div class="table-container">
+
+<!--  include bootstrap form group -->
+<!--  https://getbootstrap.com/docs/4.0/components/forms/  -->
+  <form id="search-form" [formGroup]="itemForm" (ngSubmit)="onSubmit(itemForm.value)">
+
+    <!--    display ebay logo  -->
+    <div class="logo">
+      <a href="https://www.ebay.com/" target="_blank">
+        <img class="ebay-logo" src="https://www.csci571.com/hw/hw6/images/eBayLogo.png" alt="">
+      </a>
+    </div>
+
+    <!--    display search table   -->
+    <!--  input keyword  -->
+    <div class="form-group row">
+      <label for="keyword" class="col-sm-2 col-form-label">Key words<span style="color:red;">* </span></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Enter Keywords" id="keyword" formControlName="keyword">
+      </div>
+    </div>
+
+    <!--  input price range  -->
+    <div class="form-group row">
+      <label for="priceMin" class="col-sm-2 col-form-label">Price range</label>
+      <div class="col-sm-5 col">
+        <input type="number" step="any" class="form-control" placeholder="Min Price" id="priceMin" formControlName="priceMin">
+      </div>
+      <div class="col-sm-5 col">
+          <input type="number" step="any" class="form-control" placeholder="Max Price" id="priceMax" formControlName="priceMax">
+      </div>
+    </div>
+
+    <!--  input condition list  -->
+    <div class="row">
+      <div class="col-sm-2 col-form-label">Condition</div>
+
+      <div class="col-sm-10 checkboxes col-12">
+      <span *ngFor="let condition of conditions; let i=index">
+        <input type="checkbox" [value]=condition.value (change)="onCheckBoxChange($event, 'conditionArray')">
+        <label class="checkbox-label">{{condition.name}}</label>
+      </span>
+      </div>
+
+    </div>
+
+    <!--  input seller info  -->
+    <div class="row">
+      <div class="col-sm-2 col-form-label">Seller</div>
+      <div class="col-sm-10 checkboxes">
+      <span *ngFor="let seller of sellers; let i=index">
+        <input type="checkbox" [value]=seller.value (change)="onCheckBoxChange($event, 'sellerArray')">
+        <label class="checkbox-label">{{seller.name}}</label>
+      </span>
+      </div>
+    </div>
+
+
+    <!--  input shipping info  -->
+    <div class="row">
+      <div class="col-sm-2 col-form-label">Shipping</div>
+      <div class="col-sm-10 checkboxes">
+      <span *ngFor="let shipping of shippings; let i=index">
+        <input type="checkbox" [value]=shipping.value (change)="onCheckBoxChange($event, 'shippingArray')">
+        <label class="checkbox-label">{{shipping.name}}</label>
+      </span>
+      </div>
+    </div>
+
+
+    <!--  input sort order info  -->
+    <div class="row">
+      <div class="col-sm-2 col-form-label">Sort Order</div>
+      <div class="col-sm-10">
+        <select class="custom-select" formControlName="sorter">
+          <option value="BestMatch">BestMatch</option>
+          <option value="CurrentPriceHighest">CurrentPriceHighest</option>
+          <option value="PricePlusShippingHighest">PricePlusShippingHighest</option>
+          <option value="PricePlusShippingLowest">PricePlusShippingLowest</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!--  search and clear -->
+    <div class="row">
+      <div class="c_s ml-auto">
+        <button type="submit" class="btn btn-primary c_s-button">
+          <i class="material-icons">search</i>
+          Search
+        </button>
+        <button type="reset" class="btn btn-secondary c_s-button" id="clear_button" (click)="reset()">
+          <i class="material-icons">clear_all</i>
+          Clear
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="alert alert-warning" role="alert" *ngIf="!keywordValidate">Please enter a keyword</div>
+  <div class="alert alert-warning" role="alert" *ngIf="!priceValidate">Please use appropriate values for minPrice/maxPrice</div>
+  <div class="alert alert-warning" role="alert" *ngIf="!hasResult">No exact matches found</div>
+  <div class="content" *ngIf="!originalPic">
+    <app-display-table [data]="itemData"> </app-display-table>
+  </div>
+  <hr>
+</div>
+

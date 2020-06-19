@@ -1,0 +1,25 @@
+<div class="row" [id]="cool">
+
+  <div class="col-sm-2 img-box">
+    <img class="card_img" src="{{item.image}}">
+  </div>
+
+  <div class="col-sm-10 content-box">
+    <p>
+      <b class="card_title"><a href="{{item.ItemURL}}" target="_blank">{{item.title}}</a></b>
+    </p>
+    <p>
+      <b>Price: <span style="font-weight: normal">$</span></b>{{item.price}}
+    </p>
+    <span class="shipping-from-location" style="font-style: italic">{{item.location}}
+        <button type="button" id="tg-details"  class="btn btn-light" (click)="toggleDetails()">{{mode}}</button>
+    </span>
+
+    <div *ngIf="expandOrNot == true" class="tab">
+      <app-card-tab [data]="itemData"></app-card-tab>
+    </div>
+
+  </div>
+
+</div>
+<p> </p>
