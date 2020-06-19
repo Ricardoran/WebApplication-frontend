@@ -16,12 +16,10 @@ export class DisplayCardComponent implements OnInit {
   toggleDetails(){
     if(this.mode == "Show Details"){
       this.mode = "Hide Details";
-      //要把卡片延长
       this.expandOrNot = true;
       this.cool = "afterExpand";
     }else{
       this.mode = "Show Details";
-      //要把卡片缩短
       this.expandOrNot = false;
 
       this.cool = "beforeExpand";
