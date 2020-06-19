@@ -38,6 +38,9 @@
   .page /deep/ a {
     padding: 3px;
   }
+  .page /deep/ .ngx-pagination.current{
+    padding: 3px;
+  }
 
 }
 
@@ -78,7 +81,10 @@
     margin-bottom: 0;
   }
   .page /deep/ a{
-    padding: 3px;
+    padding: 5px;
+  }
+  .page /deep/ .ngx-pagination.current{
+    padding: 5px;
   }
 }
 
@@ -123,10 +129,10 @@
     margin-bottom: 0;
   }
   .page /deep/ a{
-    padding: 3px;
+    padding: 7px;
   }
   .page /deep/ .ngx-pagination.current{
-    padding: 3px;
+    padding: 7px;
   }
 }
 
